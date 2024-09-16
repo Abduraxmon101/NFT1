@@ -1,0 +1,59 @@
+.discover {
+  width: 100%;
+  .discover_items {
+    width: 100%;
+    padding: 80px 0;
+    .discover_header {
+      @include heading-style;
+    }
+    .discover_content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+      .discover_item {
+        border-radius: 20px;
+        background-color: $main-gray;
+        @include up-animation;
+        .item_img {
+          width: 100%;
+        }
+        .item_text {
+          padding: 20px 30px 25px 30px;
+          margin-top: 20px;
+          .item_title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+          }
+          .item_owner {
+            @include owner-style;
+          }
+          .item_info {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            .info_item {
+              .info_title {
+                font-size: 12px;
+                color: #858584;
+              }
+              .info_value {
+                font-family: "Space Mono", monospace;
+                color: #fff;
+              }
+              &:last-child {
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+    }
+    .discover_small_btn {
+        display: none;
+    }
+  }
+}

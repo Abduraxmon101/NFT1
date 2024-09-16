@@ -1,0 +1,129 @@
+@mixin fill-btn-style {
+  border-radius: 20px;
+  background-color: $main-purple;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border: 2px solid $main-purple;
+  transition: 0.3s all;
+  &:hover {
+    transition: 0.3s all;
+    background: none;
+    i {
+      color: $main-purple;
+    }
+  }
+}
+
+@mixin subtitle-style {
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 22px;
+  margin-top: 10px;
+  @media (max-width: 992px) {
+    font-size: 16px;
+  }
+}
+
+@mixin owner-style {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+}
+
+@mixin up-animation {
+  transition: 0.3s all;
+  &:hover {
+    cursor: pointer;
+    transition: 0.3s all;
+    transform: translate(5px, -5px);
+    box-shadow: -7px 7px 15px 3px #000;
+  }
+}
+
+@mixin title-style {
+  font-size: 38px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #fff;
+  margin: 0;
+  @media (max-width: 992px) {
+    font-size: 28px;
+  }
+}
+
+@mixin empty-btn-style {
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border: 2px solid $main-purple;
+  background: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s all;
+  i {
+    color: $main-purple;
+  }
+  &:hover {
+    transition: 0.3s all;
+    background-color: $main-purple;
+    i {
+      color: #fff;
+    }
+  }
+}
+
+@mixin heading-style {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  .header_titles {
+    h2 {
+      @include title-style;
+    }
+    div {
+      @include subtitle-style;
+    }
+  }
+  button {
+    padding: 19px 50px;
+    @include empty-btn-style;
+  }
+}
+
+@mixin mushroom-time-style {
+  width: 295px;
+  padding: 30px;
+  border-radius: 20px;
+  background: #3b3b3b80;
+  color: #fff;
+  font-family: "Space Mono", monospace;
+  .time_title {
+    font-size: 12px;
+  }
+  .time_content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 700;
+    .time_item {
+      .time_num {
+        font-size: 38px;
+      }
+      .time_name {
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+  }
+}

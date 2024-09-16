@@ -1,0 +1,83 @@
+.footer {
+    width: 100%;
+    background-color: $main-gray;
+    .footer_items {
+        width: 100%;
+        padding: 40px 0;
+        .footer_content {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            .footer_item {
+                .footer_text {
+                    text-decoration: none;
+                    color: #cccccc;
+                }
+                .footer_info {
+                    margin-top: 30px;
+                    .footer_socials {
+                        margin-top: 20px;
+                        .social_links {
+                            margin-top: 15px;
+                            display: flex;
+                            gap: 10px;
+                            a {
+                                text-decoration: none;
+                                color: #cccccc;
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+                .footer_title {
+                    font-family: 'Space Mono', monospace;
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: #fff;
+                    margin-bottom: 25px;
+                }
+                .footer_list {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+                .footer_form {
+                    min-height: 60px;
+                    width: 100%;
+                    display: flex;
+                    position: relative;
+                    margin-top: 20px;
+                    input {
+                        width: 100%;
+                        height: 60px;
+                        border-radius: 20px;
+                        border: none;
+                        outline: none;
+                        padding-left: 20px;
+                    }
+                    button {
+                        @include fill-btn-style;
+                        padding: 17px 50px;
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+                &:nth-child(1) {
+                    max-width: 327px;
+                }
+                &:nth-child(2) {
+                    max-width: 240px;
+                }
+            }
+        }
+        .footer_down {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #858584;
+            color: #cccccc;    
+        }
+    }
+}
